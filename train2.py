@@ -32,7 +32,7 @@ def retrievDataFromFolde (length = classes, folderName='train'):
         for a in images:
             try:
                 image = Image.open(path + '\\'+ a) # mở file ảnh 
-                image = image.resize((50,50)) # resize về cùng kích thước 
+                image = image.resize((30,30)) # resize về cùng kích thước 
                 image = np.array(image) # chuyển ảnh thành mảng pixel dạng số 
                 data.append(image) # thêm vào mảng data
                 labels.append(i) # lable 
@@ -83,4 +83,4 @@ print(f"Test Accuracy: {accuracy:.4f}")
 
 
 
-model.save("my_model2.keras")
+model.save("x.h5")
